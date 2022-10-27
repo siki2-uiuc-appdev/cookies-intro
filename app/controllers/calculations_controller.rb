@@ -34,6 +34,10 @@ class CalculationsController < ApplicationController
 
     @result =  @second_number.to_f - @first_number.to_f
 
+    cookies.store(:subtraction_first, @first_number)
+    cookies.store(:subtraction_second, @second_number)
+    cookies.store(:subtracion_result, @result)
+
     render({ :template => "calculation_templates/subtract_results.html.erb" })
   end
 
