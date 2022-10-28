@@ -9,3 +9,14 @@
 
   <button>Divide!</button>
 </form>
+
+<% if(cookies.fetch(:division_result) != nil) %>
+  <p>
+    Previous division:
+    <%= cookies.fetch(:division_first) %>
+    /
+    <%= cookies.fetch(:division_second) %>
+    =
+    <%= cookies.fetch(:division_result) %>
+  </p>
+<% end %> 
