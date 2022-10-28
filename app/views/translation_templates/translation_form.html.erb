@@ -29,3 +29,19 @@
     <button>Translate!</button>
   </div>
 </form>
+
+<% if cookies.fetch(:translation) != nil %>
+  <p>
+    Previous translation:
+  </p>
+  <blockquote>
+    <%= cookies.fetch(:text_to_translate)%>
+  </blockquote>
+  <p>
+    in <%= @language_choice %> translates to:
+  </p>
+  <blockquote>
+    <%= cookies.fetch(:translation) %>
+  </blockquote>
+  </p>
+<% end %>
